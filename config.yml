@@ -1,31 +1,39 @@
-title: "gradient flows"
+title: "selenography"
 description: "A blog about programming, machine learning, and whatever else I find interesting."
-author: "aletheiaaaaa"
+author: "selena"
 email: "aletheia1674@gmail.com"
 base_url: ""
 
 hero:
-  title: "gradient flows"
-  tagline: "a diary of my adventures and misadventures through the world of code"
+  title: "selena's website"
+  tagline: "a diary of her thoughts and imaginations through the web of knowledge"
   body: ""
 
 posts_label: "Latest Posts"
 
 projects:
+  - name: "Lumina"
+    description: "A text-to-image MeanFlow transformer trained off millions of high-quality images"
+    href: "https://github.com/selenine/Lumina"
+    lang: "Python"
+    links:
+      - text: "GitHub ↗"
+        href: "https://github.com/selenine/Lumina"
+
   - name: "Mirage"
     description: "Domain-specific zeroth-order optimization library with SIMD acceleration."
-    href: "https://github.com/aletheiaaaaa/Mirage"
+    href: "https://github.com/selenine/Mirage"
     lang: "C++"
     links:
       - text: "GitHub ↗"
-        href: "https://github.com/aletheiaaaaa/Mirage"
+        href: "https://github.com/selenine/Mirage"
   - name: "Episteme"
     description: "A high-performance alpha-beta UCI chess engine with neural network evaluation."
-    href: "https://github.com/aletheiaaaaa/Episteme"
+    href: "https://github.com/selenine/Episteme"
     lang: "C++"
     links:
       - text: "GitHub ↗"
-        href: "https://github.com/aletheiaaaaa/Episteme"
+        href: "https://github.com/selenine/Episteme"
 
 nav:
   - text: "Projects"

@@ -358,7 +358,7 @@ def render_page(title, body_html, cfg, root_rel="", math=False, page_id=""):
     brand = site_title
     year = datetime.date.today().year
     author = cfg.get("author", "")
-    footer_left = f"&copy; {year} {site_title}"
+    footer_left = f"&copy; {year}"
     if author:
         footer_left += f" &middot; {author}"
     footer_links = "".join(
@@ -628,7 +628,7 @@ def build_index(posts, cfg):
         title_html = h_title.replace(">", '<span class="hero-op">&gt;</span>')
         hero_html = (
             '<section class="content-width hero">'
-            f'<div class="hero-kicker"><span class="hero-prompt">$</span> {kicker}</div>'
+            f'<div class="hero-kicker">{kicker}</div>'
             f'<h1><span class="hero-type">{title_html}</span></h1>'
         )
         if h_tagline:

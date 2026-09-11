@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>dpbusd, explained — gradient flows</title>
+  <title>dpbusd, explained — selenography</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
   <div id="reading-progress" class="reading-progress"></div>
   <header class="site-header">
     <nav class="site-nav">
-      <div class="nav-brand"><a href="../../index.html">gradient flows</a></div>
+      <div class="nav-brand"><a href="../../index.html">selenography</a></div>
       <ul class="nav-links"><li><a href="../../projects.html">Projects</a></li><li><a href="../../blog.html">Blog</a></li><li><a href="../../about.html">About</a></li></ul>
       <div class="nav-end">
         <button class="search-btn" id="search-btn" aria-label="Search">Search <kbd>&#8984;K</kbd></button>
@@ -46,7 +46,7 @@
 </ul>
 </div>
 </div></aside><article class="post-wrap"><header class="post-header"><div class="post-header-body"><h1>dpbusd, explained</h1><p class="subtitle">Demystifying multi-layer inference.
-</p><p class="byline"><span>aletheiaaaaa</span><span class="sep">&middot;</span><span>Jul 14, 2025</span><span class="sep">&middot;</span><span>7 min read</span></p></div></header><div class="post-body"><p>Building fast neural network inference code ultimately boils down to writing fast matrix multiplications, and NNUEs are no different. However, our NNUEs <em>must</em> run efficiently on CPU, which forces us to manually parallelize our inference code in order to remain even somewhat competitive. In this article, I'll walk you through the current state-of-the-art in parallelized NNUE inference, and show how careful SIMD can massively boost your network performance. I'll assume that you know what efficient updates are, the architectures NNUEs typically have, and how neural network inference is really just matrix-vector multiplication under the hood. Bonus points if you've already got a strong single-layer network.</p>
+</p><p class="byline"><span>selena</span><span class="sep">&middot;</span><span>Jul 14, 2025</span><span class="sep">&middot;</span><span>7 min read</span></p></div></header><div class="post-body"><p>Building fast neural network inference code ultimately boils down to writing fast matrix multiplications, and NNUEs are no different. However, our NNUEs <em>must</em> run efficiently on CPU, which forces us to manually parallelize our inference code in order to remain even somewhat competitive. In this article, I'll walk you through the current state-of-the-art in parallelized NNUE inference, and show how careful SIMD can massively boost your network performance. I'll assume that you know what efficient updates are, the architectures NNUEs typically have, and how neural network inference is really just matrix-vector multiplication under the hood. Bonus points if you've already got a strong single-layer network.</p>
 <h1 id="understanding-the-concept">Understanding the Concept</h1>
 <h2 id="the-trouble-with-layer-1">The Trouble with Layer 1</h2>
 <p>Let's say you've got a single-layer network with the architecture (768 -&gt; 1024)x2 -&gt; 1. This network has two weight matrices --- one with shape 1024x768 for layer 0 (also known as the feature transformer), and the other with shape 1x2048 for layer 1. Computing a forward pass through this network is trivial: you can compute layer 0 using efficient updates, and layer 1 with a simple dot product.</p>
@@ -290,7 +290,7 @@
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>&copy; 2026 gradient flows &middot; aletheiaaaaa</span>
+      <span>&copy; 2026 &middot; selena</span>
       <nav class="footer-links"><a href="../../projects.html">projects</a><a href="../../blog.html">blog</a><a href="../../about.html">about</a></nav>
     </div>
   </footer>

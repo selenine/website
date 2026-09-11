@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MCTS as Regularized Policy Optimization — gradient flows</title>
+  <title>MCTS as Regularized Policy Optimization — selenography</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
   <div id="reading-progress" class="reading-progress"></div>
   <header class="site-header">
     <nav class="site-nav">
-      <div class="nav-brand"><a href="../../index.html">gradient flows</a></div>
+      <div class="nav-brand"><a href="../../index.html">selenography</a></div>
       <ul class="nav-links"><li><a href="../../projects.html">Projects</a></li><li><a href="../../blog.html">Blog</a></li><li><a href="../../about.html">About</a></li></ul>
       <div class="nav-end">
         <button class="search-btn" id="search-btn" aria-label="Search">Search <kbd>&#8984;K</kbd></button>
@@ -37,7 +37,7 @@
 </ul>
 </div>
 </div></aside><article class="post-wrap"><header class="post-header"><div class="post-header-body"><h1>MCTS as Regularized Policy Optimization</h1><p class="subtitle">Deriving pUCT from first principles
-</p><p class="byline"><span>aletheiaaaaa</span><span class="sep">&middot;</span><span>Jun 13, 2026</span><span class="sep">&middot;</span><span>10 min read</span></p></div></header><div class="post-body"><p>Last time, I explained the core idea behind the machine learning algorithm known as Monte Carlo tree search, and mentioned that the core equation behind it (pUCT) was derived largely by experiment. However, there's since been progress in understanding it theoretically, and this sequel will focus on how one might derive it. I'll warn you though, there's a lot of computation ahead until the satisfying result. <sup class="aside-ref">1</sup><span class="aside-note"><span class="aside-num">1</span> I largely follow the approach in <a href="https://arxiv.org/abs/2007.12509">Grill et al. (2020)</a>, for a deeper view, including generalizations to a broad family of algorithms, please have a read! </span></p>
+</p><p class="byline"><span>selena</span><span class="sep">&middot;</span><span>Jun 13, 2026</span><span class="sep">&middot;</span><span>10 min read</span></p></div></header><div class="post-body"><p>Last time, I explained the core idea behind the machine learning algorithm known as Monte Carlo tree search, and mentioned that the core equation behind it (pUCT) was derived largely by experiment. However, there's since been progress in understanding it theoretically, and this sequel will focus on how one might derive it. I'll warn you though, there's a lot of computation ahead until the satisfying result. <sup class="aside-ref">1</sup><span class="aside-note"><span class="aside-num">1</span> I largely follow the approach in <a href="https://arxiv.org/abs/2007.12509">Grill et al. (2020)</a>, for a deeper view, including generalizations to a broad family of algorithms, please have a read! </span></p>
 <h1 id="setup-and-notation">Setup and Notation</h1>
 <p>In a slight change from last time (to something that's more in line with mainstream reinforcement learning literature), let's call each state (such as a board position) $x$, each action (such as a move) $a$, and the policy value (or just policy) of $a$ at $x$ $\pi_{\theta}(a|x)$, where I'm using $\theta$ to indicate that the policy is a function of some neural network's parameters. Now let's say $\hat{\pi}$ is the <em>empirical visit distribution</em>, that is, the normalized visit counts for each action from a given state <sup class="aside-ref">2</sup><span class="aside-note"><span class="aside-num">2</span> The use of the policy-style notation $\hat{\pi}$ is intentional, this will turn out to be the target to which we're optimizing our policy </span></p>
 <p>$$
@@ -144,7 +144,7 @@ $$</p>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>&copy; 2026 gradient flows &middot; aletheiaaaaa</span>
+      <span>&copy; 2026 &middot; selena</span>
       <nav class="footer-links"><a href="../../projects.html">projects</a><a href="../../blog.html">blog</a><a href="../../about.html">about</a></nav>
     </div>
   </footer>

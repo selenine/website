@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-I'm Aletheia (pseudonymous), a CS undergrad that really finds anything interesting, but is currently obsessed with machine learning and high-performance computing! When I'm not failing to understand a machine learning paper or "accidentally" pessimizing a scalar implementation, you can find me listening to classical music, or more likely just hanging out on online forums. I hope you enjoy!
+I'm Selena (pseudonymous), a CS undergrad that really finds anything interesting, but is currently obsessed with machine learning and high-performance computing! When I'm not failing to understand a machine learning paper or "accidentally" pessimizing a scalar implementation, you can find me listening to classical music, or more likely just hanging out on online forums. I hope you enjoy!
 
 ## Right now
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deconstructing AlphaGo: Exploring Monte Carlo Tree Search — gradient flows</title>
+  <title>Deconstructing AlphaGo: Exploring Monte Carlo Tree Search — selenography</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
   <div id="reading-progress" class="reading-progress"></div>
   <header class="site-header">
     <nav class="site-nav">
-      <div class="nav-brand"><a href="../../index.html">gradient flows</a></div>
+      <div class="nav-brand"><a href="../../index.html">selenography</a></div>
       <ul class="nav-links"><li><a href="../../projects.html">Projects</a></li><li><a href="../../blog.html">Blog</a></li><li><a href="../../about.html">About</a></li></ul>
       <div class="nav-end">
         <button class="search-btn" id="search-btn" aria-label="Search">Search <kbd>&#8984;K</kbd></button>
@@ -49,7 +49,7 @@
 </ul>
 </div>
 </div></aside><article class="post-wrap"><header class="post-header"><div class="post-header-body"><h1>Deconstructing AlphaGo: Exploring Monte Carlo Tree Search</h1><p class="subtitle">What do you do when there are too many possibilities?
-</p><p class="byline"><span>aletheiaaaaa</span><span class="sep">&middot;</span><span>Jun 8, 2026</span><span class="sep">&middot;</span><span>11 min read</span></p></div></header><div class="post-body"><p>In what's since become a watershed moment in AI, DeepMind's AlphaGo <a href="http://theguardian.com/technology/2016/mar/15/googles-alphago-seals-4-1-victory-over-grandmaster-lee-sedol">defeated 18-time Go champion Lee Sedol</a> in 2016, about a decade earlier than expected. DeepMind would then go on to produce a flurry of advancements: first <a href="https://www.nature.com/articles/nature24270">AlphaGo Zero</a>, which taught itself instead of learning from humans, and then <a href="https://www.science.org/doi/10.1126/science.aar6404">AlphaZero</a>, which extended the approach to other board games like chess and shogi. Throughout these advancements was an approach known as <em>Monte Carlo tree search</em>, or <em>MCTS</em> for short, but when I first got into learning about it, I couldn't find any good resources. To fix this, I've written this blogpost, that hopefully demystifies some of the confusion for you too. I'll start by giving the basic idea, and then formalizing it as needed.</p>
+</p><p class="byline"><span>selena</span><span class="sep">&middot;</span><span>Jun 8, 2026</span><span class="sep">&middot;</span><span>11 min read</span></p></div></header><div class="post-body"><p>In what's since become a watershed moment in AI, DeepMind's AlphaGo <a href="http://theguardian.com/technology/2016/mar/15/googles-alphago-seals-4-1-victory-over-grandmaster-lee-sedol">defeated 18-time Go champion Lee Sedol</a> in 2016, about a decade earlier than expected. DeepMind would then go on to produce a flurry of advancements: first <a href="https://www.nature.com/articles/nature24270">AlphaGo Zero</a>, which taught itself instead of learning from humans, and then <a href="https://www.science.org/doi/10.1126/science.aar6404">AlphaZero</a>, which extended the approach to other board games like chess and shogi. Throughout these advancements was an approach known as <em>Monte Carlo tree search</em>, or <em>MCTS</em> for short, but when I first got into learning about it, I couldn't find any good resources. To fix this, I've written this blogpost, that hopefully demystifies some of the confusion for you too. I'll start by giving the basic idea, and then formalizing it as needed.</p>
 <h1 id="when-the-action-space-is-too-big">When the Action Space is Too Big</h1>
 <p>Let's say you've just wrapped up a chess game, and you're using the state-of-the-art computer program <a href="https://stockfishchess.org/">Stockfish</a> to get feedback. What Stockfish does under the hood is to list all possible responses to a move (in what's known as the <em>action space</em>), and then their responses, and so on until it's searched deep enough to provide a good answer. Since most continuations of a position are bad (for instance, if your queen is attacked, you probably won't move anything other than the queen), Stockfish uses a technique called <em>alpha-beta pruning</em> to stop searching lines that it knows are suboptimal. This, combined with an extensive array of heuristics to eliminate moves that are likely to be poor, is what makes Stockfish the undisputed champion at computer chess.</p>
 <figure class="figure--svg"><svg width="680" height="412" viewBox="0 0 680 412" xmlns="http://www.w3.org/2000/svg" role="img" data-themed="true">
@@ -400,7 +400,7 @@ $$</p>
   </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>&copy; 2026 gradient flows &middot; aletheiaaaaa</span>
+      <span>&copy; 2026 &middot; selena</span>
       <nav class="footer-links"><a href="../../projects.html">projects</a><a href="../../blog.html">blog</a><a href="../../about.html">about</a></nav>
     </div>
   </footer>

@@ -3,7 +3,7 @@ title: "dpbusd, explained"
 description: |
   Demystifying multi-layer inference.
 author:
-  - name: aletheiaaaaa
+  - name: selena
 date: July 14, 2025
 output:
   distill::distill_article:

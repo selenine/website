@@ -2,7 +2,7 @@
 title: "MCTS as Regularized Policy Optimization"
 description: |
   Deriving pUCT from first principles
-author: "aletheiaaaaa"
+author: "selena"
 date: 2026-06-13
 tags: []
 ---

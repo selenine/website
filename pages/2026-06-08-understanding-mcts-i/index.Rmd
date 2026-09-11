@@ -2,7 +2,7 @@
 title: "Deconstructing AlphaGo: Exploring Monte Carlo Tree Search"
 description: |
   What do you do when there are too many possibilities?
-author: "aletheiaaaaa"
+author: "selena"
 date: 2026-06-08
 ---
 
